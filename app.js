@@ -1,19 +1,20 @@
 var fs = require('fs');
 
 var express = require('express');
-var ejs = require('express');
 
 var artist = require('./routes/artist');
+var bodyParser = require('body-parser');
+
 var app = express();
 
 app.set('view engine', 'ejs');
 
 app.locals.title = 'Nodetunes';
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/artist', artist);
 
-
-
+require('./lib/mongodb');
 
 
 var port = process.env.PORT || 3000;

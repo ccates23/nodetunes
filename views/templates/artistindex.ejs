@@ -5,16 +5,25 @@
 </head>
  <body>
   <h1>Artist</h1>
+  <a href="/artist/new">New Search</a>
    <table>
     <thead>
      <tr>
   	 <th>Artist</th>
   	 <th>Genre</th>
-  	 <th>Bio</th>
     </tr>
    </thead>
   <tbody>
-
+  <% artists.forEach(function (artist) { %>
+   <tr>
+   	<td><%= artist.artist %></td>
+   	<td><%= artist.genre %></td>
+   	<td>
+   	<form action="/artist/<%= artist._id %>/submit" method="POST">
+   	</form>
+	</td>
+	</tr>
+   <% }); %>
    </tbody>
   </table>
  </body>
