@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%= title %> | Artist | </title>
+	<title><%= title %> | Artist Index </title>
 </head>
  <body>
-  <h1>Artist</h1>
+  <h1>Artist Index</h1>
   <a href="/artist/new">New Search</a>
    <table>
     <thead>
@@ -19,6 +19,9 @@
    	<td><%= artist.artist %></td>
    	<td><%= artist.genre %></td>
    	<td>
+   	<form action="/artist/delete/<%= artist._id %>" name="delete" method="POST">
+   	<input type="submit" value="delete">
+   	</form>
    	<form action="/artist/<%= artist._id %>/submit" method="POST">
    	</form>
 	</td>

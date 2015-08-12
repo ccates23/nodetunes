@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%+ title %> | Node Tunes | New Search</title>
+	<title><%+ title %> | Node Tunes | Add Artist</title>
 </head>
 <body>
-<h1> NodeTunes | Artist Search </h1>
+<h1> NodeTunes | Add Artist </h1>
 <form action="/artist" method="POST">
 Artist: <input name="artist" type="text" placeholder="Artist">
 Genre:
@@ -18,6 +18,11 @@ Genre:
 <option value="Classical">Classical</option>
 </select>
 <input type="submit" placeholder="Add Artist" vaule="Add to artist list"</input>
+</form>
+<h1>Node Tunes | Search Artist </h1>
+<form action="/album" method="POST">
+Artist: <input name="artist" type="text" placeholder="Artist">
+<input type="search" placeholder="Search" value="search">
 </form>
 </body>
 </html>

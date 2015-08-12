@@ -27,8 +27,14 @@ router.post('/', function (req, res) {
 
 	collection.save(req.body, function() {
 		res.redirect('/artist')
-	
-	});
+   });
+});
+
+router.post('/delete/:id', function (req, res) {
+	var collection = global.db.collection('artist');
+	collection.remove({_id: ObjectID(req.params.id)}, function() {
+		res.redirect('/artist')
+	})
 });
 
 router.post('/new/:id/submit', function (req, res) {
@@ -42,8 +48,5 @@ router.post('/new/:id/submit', function (req, res) {
 
     });
 });
-
-
-
 
 module.exports = router;
