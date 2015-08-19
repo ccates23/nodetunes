@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title><%= title %> | Artist Index </title>
-</head>
+  <%- include('stylesheets') %>
+ </head>
  <body>
   <h1>Artist Index</h1>
   <a href="/artist/new">New Search</a>
@@ -29,5 +30,6 @@
    <% }); %>
    </tbody>
   </table>
+  <%- include('javascript') %>
  </body>
 </html>

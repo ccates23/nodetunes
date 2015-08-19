@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title><%+ title %> | Node Tunes | Add Artist</title>
+	<%- include('stylesheets') %>
 </head>
 <body>
 <h1> NodeTunes | Add Artist </h1>
@@ -20,9 +21,10 @@ Genre:
 <input type="submit" placeholder="Add Artist" vaule="Add to artist list"</input>
 </form>
 <h1>Node Tunes | Search Artist </h1>
-<form action="/album" method="POST">
+<form action="/artist/search" method="GET">
 Artist: <input name="artist" type="text" placeholder="Artist">
-<input type="search" placeholder="Search" value="search">
+<input class="searchartist" type="submit" placeholder="Search" value="search">
 </form>
+<%- include('javascript') %>
 </body>
 </html>
